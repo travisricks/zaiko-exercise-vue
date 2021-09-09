@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "name": "Blend Coffee (S)",
+      "price": 100,
+      "category": "Hot"
+    },
+    {
+      "name": "Blend Coffee (M)",
+      "price": 150,
+      "category": "Hot"
+    },
+    {
+      "name": "Blend Coffee (L)",
+      "price": 180,
+      "category": "Hot"
+    },
+    {
+      "name": "Iced Coffee (S)",
+      "price": 100,
+      "category": "Iced"
+    },
+    {
+      "name": "Iced Coffee (M)",
+      "price": 150,
+      "category": "Iced"
+    },
+    {
+      "name": "Cafe Latte (M)",
+      "price": 150,
+      "category": "Hot"
+    },
+    {
+      "name": "Cafe Latte (M)",
+      "price": 180,
+      "category": "Hot"
+    },
+    {
+      "name": "Iced Cafe Latte (M)",
+      "price": 150,
+      "category": "Iced"
+    },
+    {
+      "name": "Matcha Latte",
+      "price": 210,
+      "category": "Hot"
+    },
+    {
+      "name": "Iced Matcha Latte",
+      "price": 210,
+      "category": "Iced"
+    }
+  ]
+}
