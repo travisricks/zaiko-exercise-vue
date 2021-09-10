@@ -1,5 +1,5 @@
 <template>
-  <CouponComponent :amount="1000" />
+  <CouponComponent :amount="1999" />
   <PremiumComponent />
   <MenuComponent />
 </template>
