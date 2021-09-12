@@ -4,7 +4,7 @@
       <template v-if="!isLoading && !hasAxiosError">
         <div class="dropdown text-end">
           <button
-            class="btn btn-success btn-sm dropdown-toggle"
+            class="bg-green [ btn btn-success btn-sm dropdown-toggle ]"
             type="button"
             id="dropdownMenuButton"
             data-bs-toggle="dropdown"
@@ -142,6 +142,8 @@ export default {
         this.hasAxiosError = true;
       })
       .finally(() => {
+        // setTimeout is for demo to simulate waiting for server. 
+        // This would not be used in a real application.
         setTimeout(() => {
           this.isLoading = false;
         }, 500);
@@ -153,7 +155,7 @@ export default {
 <style lang="scss" scoped>
 .dropdown-item {
   &:active {
-    background-color: #198754;
+    background-color: $color-green-dark;
   }
   &:hover {
     cursor: pointer;
@@ -161,5 +163,11 @@ export default {
 }
 .link-success {
   cursor: pointer;
+}
+.card {
+  @include borderPink;
+}
+.bg-green {
+  background-color: $color-green-dark;
 }
 </style>

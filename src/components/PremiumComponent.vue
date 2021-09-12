@@ -1,5 +1,5 @@
 <template>
-  <div class="card [ m-2 p-2 p-sm-4 overflow-hidden ]">
+  <div class="card [ m-2 p-2 p-sm-4 overflow-hidden shadow ]">
     <div class="grid [ card-body ]">
       <div class="grid-a title [ mx-auto p-1 p-sm-0 ]">
         <div class="title--inner">ZAIKOプレミアム*特典</div>
@@ -45,7 +45,7 @@
         </li>
       </ul>
       <div class="grid-d">
-        <a href="#" class="btn btn-success">
+        <a href="#" class="action-button [ btn btn-success ]">
           登録して、お得な特典を今すぐ利用
         </a>
         <ul class="fine-print [ list-unstyled text-md-end mt-4 mb-0 ]">
@@ -106,9 +106,7 @@ $breakpoint-md: "min-width: 768px";
 }
 
 .card {
-  border: 2px solid $color-main;
-  border-radius: 10px;
-  max-width: 750px;
+  @include borderPink;
 }
 .title {
   background-color: $color-main;
@@ -198,17 +196,19 @@ $breakpoint-md: "min-width: 768px";
   }
 }
 
-a.btn {
+.action-button {
   width: 100%;
   font-weight: 700;
+  background-color: $color-accent-dark;
+
   @media ($breakpoint-sm) {
     padding: 10px 0;
   }
 }
 
 .fine-print {
-  font-size: 13px;
-  color: gray;
+  font-size: 14px;
+  color: $color-text-gray;
 
   & > * + * {
     margin-top: 4px;

@@ -1,0 +1,28 @@
+/**
+ * Set all states for an anchor tag
+ */
+@mixin links($default, $visit, $hover, $active) {
+  & {
+    color: $default;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active,
+    &:focus {
+      color: $active;
+      outline: $active dashed 2px;
+      outline-offset: 4px;
+    }
+  }
+}
+
+/**
+ * Create a rounded pink border on a card element
+ */
+@mixin borderPink {
+  border: 2px solid $color-main;
+  border-radius: 10px;
+}

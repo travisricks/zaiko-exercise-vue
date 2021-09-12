@@ -15,24 +15,3 @@ $color-accent-dark: $color-green-dark;
 $color-text-dark: hsl(210, 11%, 15%);
 $color-text-gray: hsl(0, 0%, 46%);
 $color-text-light: hsl(0, 0%, 100%);
-
-// Sass Mixins
-/**
- * Set all states for an anchor tag
- */
-@mixin links ($default, $visit, $hover, $active) {
-  & {
-    color: $default;
-    &:visited {
-      color: $visit;
-    }
-    &:hover {
-      color: $hover;   
-    }
-    &:active, &:focus {
-      color: $active;
-      outline: $active dashed 2px;
-      outline-offset: 4px;
-    }
-  }
-}

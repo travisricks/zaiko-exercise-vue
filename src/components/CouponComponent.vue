@@ -1,6 +1,6 @@
 <template>
   <div class="coupon [ card m-2 text-center ]">
-    <div class="card-body flow">
+    <div class="flow [ card-body ]">
       <div class="ribbon">クーポン</div>
       <div class="coupon__title [ mt-6 mt-sm-0 text-start text-sm-center ps-4 ps-sm-0 ]">今回の割引金額*</div>
       <div class="coupon__amount">
@@ -46,21 +46,23 @@ export default {
 
 .coupon {
   overflow: hidden; // used for the top-right ribbon
-  border: 2px solid $color-main;
-  border-radius: 10px;
+  @include borderPink;
 
   &__title {
     $spacing: 16px;
     font-size: 20px;
-    font-weight: 500;
-    &::before {
+    
+    &::before, &::after {
       content: '\2044'; // using a fractional slash because the spacing is more symmetrical than a backslash in this font
+    }
+    
+    &::before {
       margin-right: $spacing;
       display: inline-block;
       transform: scaleX(-1);
     }
+    
     &::after {
-      content: '\2044';
       margin-left: $spacing;
     }
   }
