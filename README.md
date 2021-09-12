@@ -1,6 +1,6 @@
 # Zaiko Vue Test Submission - Travis Ricks
 
-Thank you for this opportunity. I had a lot of fun implementing these components and I look forward to the opportunity to discuss them with you.
+Thank you for this opportunity. I had a lot of fun implementing these components and I look forward to discussing them with you.
 
 ## Demo
 
@@ -11,7 +11,7 @@ View a [working demo](https://competent-pasteur-9084ea.netlify.app/) hosted on N
 ## Overall Notes
 
 - Implemented with Vue3, Bootstrap, and Sass
-- To make the code reusable and flexible, I created Sass variables and mixins. The variables allow the main pink and green colors to be changed globally, creating a different look to the components. These could also be refactored to Vue props on the components. The mixins help with preventing code duplication.
+- To make the components reusable and flexible, I created Sass variables and mixins. The variables allow the main pink and green colors to be changed globally. These could also be refactored to Vue props on the components. The mixins help with preventing code duplication.
 - Whenever necessary, fluid type sizing was used for smooth transitions between different screen sizes.
 
 ## Task 1: Coupon Component
