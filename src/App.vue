@@ -1,7 +1,9 @@
 <template>
-  <CouponComponent :amount="1999" />
-  <PremiumComponent />
-  <MenuComponent />
+  <div class="wrapper">
+    <CouponComponent :amount="1000" />
+    <PremiumComponent />
+    <MenuComponent />
+  </div>
 </template>
 
 <script>
@@ -26,10 +28,16 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 960px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
   color: $color-text-dark;
+}
+
+.wrapper {
+  & > * + * {
+    margin-top: 2rem !important; // !important to override bootstrap
+  }
 }
 </style>
