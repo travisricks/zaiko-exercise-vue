@@ -130,7 +130,9 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:8080/data/menu.json")
+      .get(
+        process.env.VUE_APP_API_PATH || "http://localhost:8080/data/menu.json"
+      )
       .then((response) => {
         this.items = response.data.items;
         this.displayedItems = response.data.items;
