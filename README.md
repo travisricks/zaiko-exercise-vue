@@ -1,69 +1,53 @@
-# zaiko-exercise-vue
+# Zaiko Vue Test Submission - Travis Ricks
 
-# Notes
-- Implementation **does not** have to be pixel-perfect to the provided mock ups; you can also make changes you believe would improve readability, accessibility, etc. We may ask about the rationale behind large changes.
-- A base Vue 3 + Bootstrap installation is provided, but feel free to use your preference of framework or libraries.
-- Base components containing the required text are provided. Feel free to change the HTML or create new files, but all text in the component must be used.
+Thank you for this opportunity. I had a lot of fun implementing these components and I look forward to the opportunity to discuss them with you.
 
----
+## Demo
 
-# Task 0: Set up
+<a href="https://competent-pasteur-9084ea.netlify.app/" target="_blank"><img src="./demo-images/demo-for-readme.gif" width="90%" alt="an animation of the application in this repository" /></a>
 
-1. Install
-   ```
-   npm install
-   ```
-2. Compile with hot-reloads
-   ```
-   npm run serve
-   ```
+View a [working demo](https://competent-pasteur-9084ea.netlify.app/) hosted on Netlify.
 
----
+## Overall Notes
 
-# Task 1: Coupon Component
-1. Update `./src/CouponComponent.vue` to match the following mock up:
+- Implemented with Vue3, Bootstrap, and Sass
+- To make the code reusable and flexible, I created Sass variables and mixins. The variables allow the main pink and green colors to be changed globally, creating a different look to the components. These could also be refactored to Vue props on the components. The mixins help with preventing code duplication.
+- Whenever necessary, fluid type sizing was used for smooth transitions between different screen sizes.
 
-   <center>
-   <img src="https://d38fgd7fmrcuct.cloudfront.net/1_3xcb9oxm04axv5axgexku.jpg" />
-   
-   <i>Task 1 Mock up: Wide screen view</i>
-   </center>
-   <center><img src="https://d38fgd7fmrcuct.cloudfront.net/1_3xcb9p04umy5xcm4btn2m.jpg" />
-   
-   <i>Task 1 Mock up: Mobile view</i>
-   </center>
+## Task 1: Coupon Component
 
-2. The component must be responsive and display well on both PC and mobile view.
-3. **Stretch goal:** We've provided an asset for the coupon in `./src/assets/coupon.png`, but if you're feeling ambitious you can try converting this to SVG or pure CSS.
+<img src="./demo-images/coupon-component.png" width="90%" alt="a screenshot of the coupon component" />
 
----
+### Features
 
-# Task 2: Premium Component
-1. Update `./src/PremiumComponent.vue` to match the following mock up:
-   <center>
-   <img src="https://d38fgd7fmrcuct.cloudfront.net/1_3xcbbnxjprnkhtgwrqjj1.jpg" />
+- Fully-responsive component
+- Hover and focus styles are included for the links.
+- Created a Sass mixin to more easily apply all necessary states for links.
+- The coupon amount is passed in as a prop and formatted with commas when necessary.
+- Text selection is disabled on the クーポン ribbon for improved usability.
+- Green color was darkened to pass contrast guidelines.
+- The 'terms and conditions' text is flush-left on smaller screens to help with readability.
+- **Stretch:** Recreated the coupon background as an SVG for more flexibility.
 
-   <i>Task 2 Mock up: Wide screen view</i>
-   </center>
-   <center><img src="https://d38fgd7fmrcuct.cloudfront.net/1_3xcbbnvx9mktw7go0fxoy.jpg" />
+## Task 2: Premium Component
 
-   <i>Task 2 Mock up: Mobile view</i>
-   </center>
+<img src="./demo-images/premium-component.png" width="90%" alt="a screenshot of the premium component" />
 
-2. GIF and ribbon assets are available at `./src/assets/premium_mobile_coin.gif` and `./src/assets/premium_ribbon.png`
-3. The component must be responsive and display well on both PC and mobile view.
-4. **Stretch goal:** We've provided an asset for the ribbon in `./src/assets/premium_ribbon.png`, but if you're feeling ambitious you can try converting this to SVG or pure CSS.
+### Features
 
----
+- Fully-responsive component
+- Use of CSS Grid to achieve the responsive designs.
+- The coin gif had extra white space in the file, so I edited it so it could be positioned more accurately with CSS.
+- **Stretch:** Recreated the ribbon background as an SVG for more flexibility. Also to make it more responsive, the sides of the ribbon are hidden on very small screens (< 275px).
 
-# Task 3: API Interaction
-1. `./src/MenuComponent.vue` contains a loading spinner and a table.
-2. Add an API call that fills the table with data from `public/data/menu.json`.
-3. Before the data is loaded, the loading spinner should be shown and the table should be hidden. After the data is loaded, the loading spinner should be hidden and the table should be shown.
-4. Items in the menu can be hot or cold, designated by their category. Hot menu items should be red and cold menu items should be blue. 
-5. **Hint:** While the server is running, the JSON file should be accessible by default at `http://localhost:8080/data/menu.json`
-6. **Hint:** We've already installed axios but you're free to use whatever library or implementation you're comfortable with.
-<center><img src="https://d38fgd7fmrcuct.cloudfront.net/1_3xd57oayx7a7dhic3414w.jpg" />
+## Task 3: API Interaction Component
 
-*Task 3 Sample*
-</center>
+<img src="./demo-images/api-component.gif" width="90%" alt="an animation of the API component showing different sorting options" />
+
+### Features
+
+- Loading spinner is displayed during API call. (For the sake of the demo I have added a setTimeout since the local fetch is so fast).
+- Items are dynamically styled based on drink type.
+- There is an error screen if the API is unavailable. You can simulate this from the dropdown menu.
+- Fully-responsive component
+- **Stretch:** I added sorting options for the data: Price, Alphabetical, and Type.
