@@ -1,11 +1,38 @@
 // Define Global Available Colors
 $color-blue: hsl(193, 99%, 91%);
 $color-green: hsl(152, 41%, 53%);
-$color-pink: hsl(339, 81%, 56%);
-$color-pink-light: hsl(351, 74%, 91%);
+$color-green-dark: hsl(150, 41%, 36%);
+$color-pink: hsl(334, 100%, 51%);
+$color-pink-light: hsl(334, 74%, 91%);
+$color-pink-dark: hsl(334, 81%, 36%);
 
 // Define Application Colors
 $color-main: $color-pink;
+$color-main-light: $color-pink-light;
+$color-main-dark: $color-pink-dark;
 $color-accent: $color-green;
-$color-text-dark: #010203;
-$color-text-light: white;
+$color-accent-dark: $color-green-dark;
+$color-text-dark: hsl(210, 11%, 15%);
+$color-text-gray: hsl(0, 0%, 46%);
+$color-text-light: hsl(0, 0%, 100%);
+
+// Sass Mixins
+/**
+ * Set all states for an anchor tag
+ */
+@mixin links ($default, $visit, $hover, $active) {
+  & {
+    color: $default;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;   
+    }
+    &:active, &:focus {
+      color: $active;
+      outline: $active dashed 2px;
+      outline-offset: 4px;
+    }
+  }
+}

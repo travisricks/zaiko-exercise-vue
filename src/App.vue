@@ -1,5 +1,5 @@
 <template>
-  <CouponComponent />
+  <CouponComponent :amount="1999" />
   <PremiumComponent />
   <MenuComponent />
 </template>
@@ -30,5 +30,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
+  color: $color-text-dark;
 }
 </style>
