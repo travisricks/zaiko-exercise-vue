@@ -51,3 +51,31 @@ View a [working demo](https://competent-pasteur-9084ea.netlify.app/) hosted on N
 - There is an error screen if the API is unavailable. You can simulate this from the dropdown menu.
 - Fully-responsive component
 - **Stretch:** I added sorting options for the data: Price, Alphabetical, and Type.
+
+## Run Locally
+
+Here are instructions to get this running on your local machine.
+
+Clone the project
+
+```bash
+  git clone https://github.com/travisricks/zaiko-exercise-vue
+```
+
+Go to the project directory
+
+```bash
+  cd zaiko-exercise-vue
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start it up! 🚀
+
+```bash
+  npm run serve
+```
