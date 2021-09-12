@@ -13,7 +13,7 @@ View a [working demo](https://competent-pasteur-9084ea.netlify.app/) hosted on N
 - Implemented with Vue3, Bootstrap, and Sass
 - To make the components reusable and flexible, I created Sass variables and mixins. The variables allow the main pink and green colors to be changed globally. These could also be refactored to Vue props on the components. The mixins help with preventing code duplication.
 - Whenever necessary, fluid type sizing was used for smooth transitions between different screen sizes.
-- The Avenir font was specified in `App.vue`, but it doesn't appear to be a free font or to have Japanese characters, so I would expect this to look different on a device that has Avenir installed. I would recommend changing to a font like Noto Sans JP or including Avenir in the repository.
+- The Avenir font was specified in `App.vue`, but it doesn't appear to be a free font or installed on all systems, so I changed the font to Noto Sans JP from Google Fonts.
 
 ## Task 1: Coupon Component
 

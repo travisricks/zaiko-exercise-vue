@@ -8,7 +8,7 @@
         今回の割引金額*
       </div>
       <div class="coupon__amount">
-        <span
+        <span class="coupon__amount--inner"
           >￥<span class="coupon__amount--value">{{
             amount.toLocaleString()
           }}</span
@@ -91,10 +91,17 @@ export default {
     flex-direction: column;
     justify-content: center;
     padding-right: 4%;
-    font-size: 24px;
-    font-size: clamp(1rem, 6vw, 1.9rem);
+    font-size: clamp(
+      1.3rem,
+      -1.1rem + 12.8vw,
+      1.9rem
+    ); // 300px: 1.3rem, 375px: 1.9rem
     font-weight: 700;
     color: $color-text-light;
+
+    &--inner {
+      transform: translateY(-3px); // optically align font
+    }
 
     &--value {
       font-size: 1.75em;

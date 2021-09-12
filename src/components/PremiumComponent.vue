@@ -123,7 +123,7 @@ $breakpoint-md: "min-width: 768px";
   color: $color-text-light;
 
   &--inner {
-    transform: translateY(1px); // optically align this font
+    transform: translateY(-1px); // optically align font
   }
 
   $ribbon-end-width: 30px;
@@ -171,21 +171,20 @@ $breakpoint-md: "min-width: 768px";
   }
 
   li {
-    line-height: 1.1;
     @media ($breakpoint-sm) {
-      line-height: 1.3;
+      line-height: 1.8;
     }
   }
 
   li::before {
     content: "\2022";
     color: $color-main;
-    font-size: 1.9em;
+    font-size: 3em;
     position: relative;
-    top: 4px;
+    top: 6px;
     width: 12px;
     margin-left: -15px;
-    display: inline-block;
+    line-height: 0;
   }
 
   &--emphasis {
