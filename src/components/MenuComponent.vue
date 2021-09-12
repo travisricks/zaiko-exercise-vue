@@ -142,7 +142,7 @@ export default {
         this.hasAxiosError = true;
       })
       .finally(() => {
-        // setTimeout is for demo to simulate waiting for server. 
+        // setTimeout is for demo to simulate waiting for server.
         // This would not be used in a real application.
         setTimeout(() => {
           this.isLoading = false;
@@ -168,6 +168,6 @@ export default {
   @include borderPink;
 }
 .bg-green {
-  background-color: $color-green-dark;
+  @include backgroundGreen;
 }
 </style>

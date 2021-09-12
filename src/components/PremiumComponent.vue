@@ -199,7 +199,7 @@ $breakpoint-md: "min-width: 768px";
 .action-button {
   width: 100%;
   font-weight: 700;
-  background-color: $color-accent-dark;
+  @include backgroundGreen;
 
   @media ($breakpoint-sm) {
     padding: 10px 0;

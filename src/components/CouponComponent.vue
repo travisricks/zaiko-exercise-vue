@@ -2,18 +2,31 @@
   <div class="coupon [ card m-2 text-center ]">
     <div class="flow [ card-body ]">
       <div class="ribbon">クーポン</div>
-      <div class="coupon__title [ mt-6 mt-sm-0 text-start text-sm-center ps-4 ps-sm-0 ]">今回の割引金額*</div>
+      <div
+        class="coupon__title [ mt-6 mt-sm-0 text-start text-sm-center ps-4 ps-sm-0 ]"
+      >
+        今回の割引金額*
+      </div>
       <div class="coupon__amount">
-        <span>￥<span class="coupon__amount--value">{{amount.toLocaleString()}}</span>割引</span>
+        <span
+          >￥<span class="coupon__amount--value">{{
+            amount.toLocaleString()
+          }}</span
+          >割引</span
+        >
       </div>
       <div>
-        <a href="#" class="coupon__button [ btn btn-success ]">ZAIKOプレミアムに登録**して割引を受ける</a>
+        <a href="#" class="coupon__button [ btn btn-success ]"
+          >ZAIKOプレミアムに登録**して割引を受ける</a
+        >
       </div>
       <div class="coupon__text-link-wrapper">
         <a href="#" class="coupon__text-link">今回は見送る</a>
       </div>
       <div>
-        <ul class="coupon__fine-print [ list-unstyled text-start text-sm-end mt-4 ]">
+        <ul
+          class="coupon__fine-print [ list-unstyled text-start text-sm-end mt-4 ]"
+        >
           <li>
             *初月無料＆サインアップボーナスの対象となるのは、初回の登録時のみです。
           </li>
@@ -28,15 +41,15 @@
 
 <script>
 export default {
-  name: 'CouponComponent',
+  name: "CouponComponent",
   props: {
     amount: {
       type: Number,
       required: true,
-      default: 0
-    }
-  }
-}
+      default: 0,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -51,24 +64,25 @@ export default {
   &__title {
     $spacing: 16px;
     font-size: 20px;
-    
-    &::before, &::after {
-      content: '\2044'; // using a fractional slash because the spacing is more symmetrical than a backslash in this font
+
+    &::before,
+    &::after {
+      content: "\2044"; // using a fractional slash because the spacing is more symmetrical than a backslash in this font
     }
-    
+
     &::before {
       margin-right: $spacing;
       display: inline-block;
       transform: scaleX(-1);
     }
-    
+
     &::after {
       margin-left: $spacing;
     }
   }
 
   &__amount {
-    background-image: url('../assets/coupon.svg');
+    background-image: url("../assets/coupon.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -78,7 +92,7 @@ export default {
     justify-content: center;
     padding-right: 4%;
     font-size: 24px;
-    font-size: clamp( 1rem, 6vw, 1.9rem );
+    font-size: clamp(1rem, 6vw, 1.9rem);
     font-weight: 700;
     color: $color-text-light;
 
@@ -91,13 +105,18 @@ export default {
 
   &__button {
     width: min(90%, 500px);
-    background-color: $color-accent-dark;
     font-weight: 700;
     border-color: transparent;
+    @include backgroundGreen;
   }
 
   &__text-link {
-    @include links($color-text-dark, $color-text-dark, $color-main, $color-main-dark);
+    @include links(
+      $color-text-dark,
+      $color-text-dark,
+      $color-main,
+      $color-main-dark
+    );
   }
 
   &__fine-print {
@@ -105,7 +124,7 @@ export default {
     color: $color-text-gray;
 
     & > li + li {
-      margin-top: .25rem;
+      margin-top: 0.25rem;
     }
   }
 }

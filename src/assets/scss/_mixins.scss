@@ -26,3 +26,18 @@
   border: 2px solid $color-main;
   border-radius: 10px;
 }
+
+/**
+ * Green Button Background
+ * This was created because of a specificity issue with 
+ * Bootstrap that only occurs with production build
+ */
+
+@mixin backgroundGreen {
+  background-color: $color-green-dark;
+
+  &:hover,
+  &:focus {
+    background-color: $color-green-dark-hover;
+  }
+}
