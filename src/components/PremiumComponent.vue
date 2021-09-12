@@ -1,5 +1,5 @@
 <template>
-  <div class="card [ m-2 p-2 p-sm-4 overflow-hidden shadow ]">
+  <div class="card [ p-2 p-sm-4 overflow-hidden shadow ]">
     <div class="grid [ card-body ]">
       <div class="grid-a title [ mx-auto p-1 p-sm-0 ]">
         <div class="title--inner">ZAIKOプレミアム*特典</div>

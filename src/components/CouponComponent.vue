@@ -1,5 +1,5 @@
 <template>
-  <div class="coupon [ card m-2 text-center ]">
+  <div class="coupon [ card text-center ]">
     <div class="flow [ card-body ]">
       <div class="ribbon">クーポン</div>
       <div

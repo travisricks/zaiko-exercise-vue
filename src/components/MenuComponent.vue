@@ -1,5 +1,5 @@
 <template>
-  <div class="card m-2">
+  <div class="card">
     <div class="card-body">
       <template v-if="!isLoading && !hasAxiosError">
         <div class="dropdown text-end">
